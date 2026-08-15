@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover beautiful HD, 4K and AMOLED wallpapers for your phone.">
+
+    <title>Wallora - HD Wallpapers</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-left">
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <a href="#" class="logo">
+                Wallora
+            </a>
+
+        </div>
+
+
+        <nav class="desktop-nav">
+
+            <a href="#" class="active">
+                Home
+            </a>
+
+            <a href="#explore">
+                Explore
+            </a>
+
+            <a href="#categories">
+                Categories
+            </a>
+
+        </nav>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-container">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search wallpapers..."
+                autocomplete="off"
+            >
+
+            <button
+                class="clear-search"
+                id="clearSearch"
+                title="Clear search">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="icon-btn"
+                id="themeBtn"
+                title="Toggle theme">
+                🌙
+            </button>
+
+            <button
+                class="icon-btn"
+                id="favoriteBtn"
+                title="Favorites">
+                ❤️
+            </button>
+
+            <button
+                class="profile-btn"
+                title="Profile">
+                👤
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#">
+            Home
+        </a>
+
+        <a href="#explore">
+            Explore
+        </a>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+        <a href="#favorites">
+            Favorites
+        </a>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    ✨ PREMIUM WALLPAPERS
+                </span>
+
+                <h1>
+                    Discover wallpapers
+                    <br>
+                    you'll love.
+                </h1>
+
+                <p>
+                    Explore beautiful HD, 4K and AMOLED
+                    wallpapers for every screen.
+                </p>
+
+                <div class="hero-search">
+
+                    <span>
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="heroSearch"
+                        placeholder="Search for cars, nature, anime..."
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section
+            class="section"
+            id="categories">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Popular Categories
+                    </h2>
+
+                </div>
+
+                <button
+                    class="view-all"
+                    id="viewAllCategories">
+                    View all →
+                </button>
+
+            </div>
+
+
+            <div class="category-list" id="categoryList">
+
+                <button
+                    class="category active"
+                    data-category="All">
+                    <span>✨</span>
+                    All
+                </button>
+
+                <button
+                    class="category"
+                    data-category="4K">
+                    <span>🔥</span>
+                    4K
+                </button>
+
+                <button
+                    class="category"
+                    data-category="AMOLED">
+                    <span>🖤</span>
+                    AMOLED
+                </button>
+
+                <button
+                    class="category"
+                    data-category="Cars">
+                    <span>🚗</span>
+                    Cars
+                </button>
+
+                <button
+                    class="category"
+                    data-category="Nature">
+                    <span>🌿</span>
+                    Nature
+                </button>
+
+                <button
+                    class="category"
+                    data-category="Anime">
+                    <span>🎌</span>
+                    Anime
+                </button>
+
+                <button
+                    class="category"
+                    data-category="Space">
+                    <span>🌌</span>
+                    Space
+                </button>
+
+                <button
+                    class="category"
+                    data-category="Luxury">
+                    <span>💎</span>
+                    Luxury
+                </button>
+
+                <button
+                    class="category"
+                    data-category="Minimal">
+                    <span>◼</span>
+                    Minimal
+                </button>
+
+                <button
+                    class="category"
+                    data-category="Dark">
+                    <span>🌑</span>
+                    Dark
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TRENDING ================= -->
+
+        <section
+            class="section"
+            id="explore">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        TRENDING NOW
+                    </span>
+
+                    <h2>
+                        Popular Wallpapers
+                    </h2>
+
+                </div>
+
+                <div class="sort-container">
+
+                    <button
+                        class="sort-btn active"
+                        data-sort="popular">
+                        Popular
+                    </button>
+
+                    <button
+                        class="sort-btn"
+                        data-sort="latest">
+                        Latest
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- WALLPAPER GRID -->
+
+            <div
+                class="wallpaper-grid"
+                id="wallpaperGrid">
+            </div>
+
+
+            <!-- NO RESULTS -->
+
+            <div
+                class="no-results"
+                id="noResults">
+
+                <div class="no-results-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    No wallpapers found
+                </h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+            </div>
+
+
+            <!-- LOAD MORE -->
+
+            <div class="load-more-container">
+
+                <button
+                    class="load-more"
+                    id="loadMore">
+
+                    Load More
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NEWSLETTER ================= -->
+
+        <section class="newsletter">
+
+            <div>
+
+                <span class="section-label">
+                    STAY INSPIRED
+                </span>
+
+                <h2>
+                    Get fresh wallpapers.
+                </h2>
+
+                <p>
+                    New wallpapers and collections,
+                    delivered to your inbox.
+                </p>
+
+            </div>
+
+
+            <form
+                class="newsletter-form"
+                id="newsletterForm">
+
+                <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    Wallora
+                </a>
+
+                <p>
+                    Beautiful wallpapers for
+                    beautiful screens.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="#explore">
+                    Popular
+                </a>
+
+                <a href="#explore">
+                    Latest
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Wallpapers
+                </h3>
+
+                <a href="#">
+                    4K Wallpapers
+                </a>
+
+                <a href="#">
+                    AMOLED
+                </a>
+
+                <a href="#">
+                    Mobile
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="#">
+                    About
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Privacy
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Wallora. All rights reserved.
+            </span>
+
+            <span>
+                Made with ❤️ for wallpaper lovers.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= WALLPAPER MODAL ================= -->
+
+    <div
+        class="modal"
+        id="wallpaperModal">
+
+        <div class="modal-overlay" id="modalOverlay"></div>
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose">
+                ×
+            </button>
+
+
+            <div class="modal-image-container">
+
+                <img
+                    id="modalImage"
+                    src=""
+                    alt="Wallpaper preview"
+                >
+
+            </div>
+
+
+            <div class="modal-info">
+
+                <div>
+
+                    <span
+                        class="modal-category"
+                        id="modalCategory">
+                    </span>
+
+                    <h2 id="modalTitle">
+                    </h2>
+
+                    <p id="modalResolution">
+                    </p>
+
+                </div>
+
+
+                <div class="modal-actions">
+
+                    <button
+                        class="modal-like"
+                        id="modalLike">
+                        ♡
+                    </button>
+
+                    <a
+                        class="download-btn"
+                        id="modalDownload"
+                        href="#"
+                        target="_blank"
+                        download>
+
+                        ↓ Download
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+
+    <div
+        class="toast"
+        id="toast">
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
